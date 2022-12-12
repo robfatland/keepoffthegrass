@@ -3,6 +3,9 @@
 ## Codingame fall challenge 2022
 
 
+* [ideas, experiments](https://github.com/robfatland/keepoffthegrass/blob/main/IdeasAndCode.md)
+
+
 Before we get started: It is a good idea to stretch our minds a bit.
 We will do two stretches.
 
