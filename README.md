@@ -18,8 +18,10 @@
     * I bet the gear number is build resources!
     * I bet the score is how many squares we control
         * High score at the end of the last turn wins
-    * Sometimes squares with bots have a **`2`** on them
-        * This is when there are two bots on that square
+    * Sometimes squares have a **`2`** on them
+        * Maybe 2 bots stacked together?
+    * There is a scrollbar to the right of the game board
+        * Rules!!! (skip this for now)
 
 ### Step 3: Run the code and see what our opponent is up to
 
