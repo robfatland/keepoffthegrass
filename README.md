@@ -2,7 +2,7 @@
 
 ## Codingame fall challenge 2022
 
-### We need concepts of **game loop** and **before game loop**
+### We need concepts of `game loop` and `before game loop`
 
 ### Step 1: Verify 'width' and 'height'
 
