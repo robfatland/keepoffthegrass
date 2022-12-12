@@ -29,10 +29,22 @@
     * Scroll back and forth in `stdout` window to see the game progress
     * Scroll left and right for a command to see its details
     * `WAIT` is allowed: Just sit there
-    * `BUILD <x> <y>` builds a factory on an empty square
+    * `BUILD <x> <y>` builds a factory (*Recycler*) on an empty square
     * `MOVE <n> <x> <y> <a> <b>` moves a bot located at <x> <y>
     * `SPAWN <n> <x> <y>` creates a new bot at <x> <y>
         * Does <n> mean 'the number of bots on this square'?
         * Why are <a> and <b> always 1 and 2?
+   
+### Step 4: Read the rules!
+
+* Aha! The game is about recycling junk to reveal a nice grassy field
+* In the `MOVE` command, `<a> <b>` is the to-square
+    * The game figures out the most efficient path for us
+        * We do not need to do 'maze path solving'
+    * We need information on which corner of the board we live on
+        * This is a kind of global orientation
+        * In the arena we might start in the upper left or the lower right
+* Each game loop, at the start: We receive information about the entire game board
+    * We can use this information to make decisions
 
 
