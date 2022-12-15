@@ -13,24 +13,28 @@ We will do two stretches.
 ### First stretch
 
 
-Let's discuss the idea of a scan of a space. 
+Let's discuss space. 
 
 
-- If my program gives your program a list: You can search it for Gladys.
-- This space has one dimension: A location along a line
-- What if Gladys is on a grid somewhere: How many dimensions?
+- One-D: If my program gives your program a list: You can search for 'Gladys'.
+    - This space has one dimension...
+        - An entry in a list
+        - A location on a line
+- What if Gladys is a bot living somewhere on a grid?
 - What if Gladys is a fish in an aquarium?
-- What if we introduce time?
+- What if we add time?
 
 
 ### Second stretch
 
 
-We need concepts of `game loop` and `before game loop`. Let's talk about
-a board game like monopoly... or chess.
+- `game loop` is a concept related to turns
+    - the challenge game will resolve moves simultaneously
+- `before game loop` is related to setting up the pieces
+    - like for monopoly or chess
 
 
-### Step 1: Verify 'width' and 'height'
+### Step 1: Let's verify 'width' and 'height'
 
 
 * Notice a game board: rectangle of spaces
@@ -54,6 +58,9 @@ a board game like monopoly... or chess.
 * If we start the game over with **Play my code**: New game board!
     * We seem to be blue always; but our start quadrant changes
     * Let's call the four quadrants **LL**, **UL**, **LR**, **UR**
+
+
+> Pro Tip: The video is actually playback; it is not 'real time'
     
 
 ### Step 3: Run the code and see what our opponent is up to
@@ -87,18 +94,43 @@ a board game like monopoly... or chess.
 > ***REALIZATION: During the board scan we can make our own copy of all the information!!!***
 
    
-### Step 5: Figure out our origin, opponent origin on turn 1
+### Step 5: Print out the game board size
 
-   
-* The only constant of a new game is all four bots make a little diamond
-    * The way to identify the origin square at the center is... ???
-    * Remember we have both `owner` and `units` 
+```
+print("width: " + str(width) + "     height: " + str(height), 
+    file=sys.stderr, flush=True)
+```
    
    
 ### Step 6: Let's roll!!!
 
 
-We know we have four units; let's try a diaspora.
+We know we have four units; let's try to head for the corner!
+
    
+```
+botx = []
+boty = []
+```
+   
+```
+if owner == 1:
+   for i in range(units):
+       botx.append(j)
+       boty.append(i)
+```
+
+
+```
+msg = ''
+nbots = len(botx)
+for i in range(nbots):
+   start_location = str(botx[i]) + ' ' + str(boty[i]) + ' '
+   end_location = str(i) + ' 0;'
+   msg = msg + 'MOVE 1 ' + start_location + end_location
+print(msg)
+```
+   
+Add these to the basic program and see if the bots do as they are instructed.
 
 
