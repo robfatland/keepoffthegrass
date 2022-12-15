@@ -107,18 +107,27 @@ print("width: " + str(width) + "     height: " + str(height),
 
 We know we have four units; let's try to head for the corner!
 
-   
+
+This goes inside the game loop above the nested for-i / for-j loop:
+
+
 ```
 botx = []
 boty = []
 ```
-   
+
+
+This goes inside the nested for-i / for-j loop: It records bot locations in two lists.
+
+
 ```
 if owner == 1:
-   for i in range(units):
+   for k in range(units):
        botx.append(j)
        boty.append(i)
 ```
+
+This replaces the print('WAIT') statement at the bottom of the game loop. Be sure to indent it so it is part of the game loop.
 
 
 ```
